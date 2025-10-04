@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/button'
-import { Input } from '@/components/input'
 import logo from '/public/logo-pizzaria.svg'
+import LoginForm from './components/login-form'
 import styles from './page.module.scss'
 
 const HomePage = () => {
@@ -11,21 +10,7 @@ const HomePage = () => {
       <Image src={logo} width={335} alt='Logo pizzaria dev' />
 
       <section className={styles.login}>
-        <form>
-          <Input
-            type='email'
-            name='email'
-            placeholder='Digite seu e-mail'
-            required
-          />
-          <Input
-            type='password'
-            name='password'
-            placeholder='Digite sua senha'
-            required
-          />
-          <Button type='submit'>Acessar</Button>
-        </form>
+        <LoginForm />
 
         <p className={styles.signupText}>
           Ainda não possui conta?{' '}

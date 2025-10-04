@@ -14,14 +14,6 @@
     flex-direction: column;
     align-items: center;
     gap: 2.4rem;
-
-    form {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-      font-size: 1.8rem;
-    }
   }
 
   .signupText {
@@ -31,7 +23,7 @@
 
   .signupLink {
     color: var(--red-900);
-    
+
     &:hover {
       text-decoration: underline;
     }
