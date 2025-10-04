@@ -28,7 +28,7 @@ const HomePage = () => {
         </form>
 
         <p className={styles.signupText}>
-          Ainda não criou uma conta?{' '}
+          Ainda não possui conta?{' '}
           <Link href='/signup' className={styles.signupLink}>
             Cadastre-se.
           </Link>
