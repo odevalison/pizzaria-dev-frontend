@@ -4,4 +4,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit",
   },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
