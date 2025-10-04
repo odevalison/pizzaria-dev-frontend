@@ -1,2 +1,3 @@
 onlyBuiltDependencies:
+  - git-commit-msg-linter
   - sharp
