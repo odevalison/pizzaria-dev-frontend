@@ -12,8 +12,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.4rem;
 
   &:hover {
     opacity: 0.85;
+  }
+
+  .loader {
+    width: 1.6rem;
+    height: 1.6rem;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }

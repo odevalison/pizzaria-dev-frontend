@@ -1,3 +1,4 @@
+import { Loader2 } from 'lucide-react'
 import { Poppins } from 'next/font/google'
 import type { ComponentProps, ReactNode } from 'react'
 import styles from './button.module.scss'
@@ -5,12 +6,14 @@ import styles from './button.module.scss'
 interface ButtonProps extends ComponentProps<'button'> {
   children: ReactNode
   type?: ComponentProps<'button'>['type']
+  loading?: boolean
 }
 
 const poppins = Poppins({ subsets: ['latin'], weight: '600' })
 
 export const Button = ({
   children,
+  loading = false,
   type = 'button',
   ...props
 }: ButtonProps) => {
@@ -20,6 +23,7 @@ export const Button = ({
       className={`${styles.button} ${poppins.className}`}
       {...props}
     >
+      {loading && <Loader2 className={styles.loader} />}
       {children}
     </button>
   )
