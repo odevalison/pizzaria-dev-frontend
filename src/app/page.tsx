@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '/public/logo-pizzaria.svg'
-import LoginForm from './components/login-form'
+import { AuthUserForm } from './components/auth-user-form'
 import styles from './page.module.scss'
 
 const HomePage = () => {
@@ -10,12 +10,12 @@ const HomePage = () => {
       <Image src={logo} width={335} alt='Logo pizzaria dev' />
 
       <section className={styles.login}>
-        <LoginForm />
+        <AuthUserForm />
 
         <p className={styles.signupText}>
           Ainda não possui conta?{' '}
-          <Link href='/signup' className={styles.signupLink}>
-            Cadastre-se.
+          <Link href='/create-account' className={styles.signupLink}>
+            Crie sua conta.
           </Link>
         </p>
       </section>
