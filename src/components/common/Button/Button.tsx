@@ -1,7 +1,7 @@
 import { Loader2 } from 'lucide-react'
 import { Poppins } from 'next/font/google'
 import type { ComponentProps, ReactNode } from 'react'
-import styles from './button.module.scss'
+import styles from './Button.module.scss'
 
 interface ButtonProps extends ComponentProps<'button'> {
   children: ReactNode

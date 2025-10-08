@@ -5,9 +5,9 @@ import { useForm } from 'react-hook-form'
 import {
   type CreateUserSchemaData,
   createUserSchema
-} from '@/actions/create-account/schema'
+} from '@/actions/createAccount/schema'
 
-export const useCreateUser = () => {
+export const useCreateAccount = () => {
   return useForm<CreateUserSchemaData>({
     resolver: zodResolver(createUserSchema),
     defaultValues: {

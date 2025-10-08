@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import {
   type AuthUserSchemaData,
   authUserSchema
-} from '@/actions/auth-user/schema'
+} from '@/actions/authUser/schema'
 
 export const useAuthUser = () => {
   return useForm<AuthUserSchemaData>({

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '/public/logo-pizzaria.svg'
-import { AuthUserForm } from './components/auth-user-form'
+import { AuthUserForm } from './components'
 import styles from './page.module.scss'
 
 const HomePage = () => {

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import logo from '/public/logo-pizzaria.svg'
 import styles from '../page.module.scss'
-import { CreateAccountForm } from './components/create-account-form'
+import { CreateAccountForm } from './components'
 
 const SignupPage = () => {
   return (

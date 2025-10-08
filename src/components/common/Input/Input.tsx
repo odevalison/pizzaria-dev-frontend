@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google'
 import { type ComponentProps, useId } from 'react'
-import styles from './input.module.scss'
+import styles from './Input.module.scss'
 
 interface InputProps extends ComponentProps<'input'> {
   label?: string

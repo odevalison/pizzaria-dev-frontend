@@ -2,12 +2,11 @@
 
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
-import { authUser } from '@/actions/auth-user'
-import type { AuthUserSchemaData } from '@/actions/auth-user/schema'
-import { Button } from '@/components/common/button'
-import { Input } from '@/components/common/input'
-import { useAuthUser } from '@/hooks/use-auth-user'
-import styles from './auth-user-form.module.scss'
+import { authUser } from '@/actions/authUser'
+import type { AuthUserSchemaData } from '@/actions/authUser/schema'
+import { Button, Input } from '@/components/common'
+import { useAuthUser } from '@/hooks/useAuthUser'
+import styles from './AuthUserForm.module.scss'
 
 export const AuthUserForm = () => {
   const router = useRouter()

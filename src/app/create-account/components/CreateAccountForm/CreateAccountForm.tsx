@@ -2,12 +2,11 @@
 
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
-import { createAccount } from '@/actions/create-account'
-import type { CreateUserSchemaData } from '@/actions/create-account/schema'
-import { Button } from '@/components/common/button'
-import { Input } from '@/components/common/input'
-import { useCreateUser } from '@/hooks/use-create-user'
-import styles from './create-account-form.module.scss'
+import { createAccount } from '@/actions/createAccount'
+import type { CreateUserSchemaData } from '@/actions/createAccount/schema'
+import { Button, Input } from '@/components/common'
+import { useCreateAccount } from '@/hooks/useCreateAccount'
+import styles from './CreateAccountForm.module.scss'
 
 export const CreateAccountForm = () => {
   const router = useRouter()
@@ -15,7 +14,7 @@ export const CreateAccountForm = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting }
-  } = useCreateUser()
+  } = useCreateAccount()
 
   const handleCreateUser = async (data: CreateUserSchemaData) => {
     try {
