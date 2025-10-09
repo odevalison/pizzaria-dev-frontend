@@ -1,6 +1,7 @@
 'use server'
 
 import axios from 'axios'
+import { cookies } from 'next/headers'
 import { api } from '@/services/api'
 import type { ErrorApiResponse } from '@/types/api/response/error'
 import type { AuthUserApiResponse } from '@/types/api/response/user'
@@ -16,6 +17,16 @@ export const authUser = async (data: AuthUserSchemaData) => {
     const { data: user } = await api.post<AuthUserApiResponse>('/auth', {
       email: data.email,
       password: data.password
+    })
+
+    const expressTime = 60 * 60 * 24 * 30
+    const cookieStore = await cookies()
+
+    cookieStore.set('session', user.token, {
+      maxAge: expressTime,
+      path: '/',
+      httpOnly: false,
+      secure: process.env.NODE_ENV === 'production'
     })
 
     return { data: user }

@@ -21,8 +21,11 @@ export const AuthUserForm = () => {
     try {
       const { data: user, error } = await authUser(data)
 
-      if (error) throw new Error(error)
-      if (!user || !user?.token) return
+      if (error) {
+        throw new Error(error)
+      } else if (!user || !user?.token) {
+        return
+      }
 
       router.push('/dashboard')
     } catch (err) {
