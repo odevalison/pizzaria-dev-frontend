@@ -4,7 +4,7 @@ import logo from '/public/logo-pizzaria.svg'
 import styles from '../page.module.scss'
 import { CreateAccountForm } from './components'
 
-const SignupPage = () => {
+const CreateAccountPage = () => {
   return (
     <div className={styles.container}>
       <Image src={logo} width={335} alt='Logo pizzaria dev' />
@@ -23,4 +23,4 @@ const SignupPage = () => {
   )
 }
 
-export default SignupPage
+export default CreateAccountPage

@@ -4,7 +4,7 @@ import logo from '/public/logo-pizzaria.svg'
 import { AuthUserForm } from './components'
 import styles from './page.module.scss'
 
-const HomePage = () => {
+const AuthenticationPage = () => {
   return (
     <div className={styles.container}>
       <Image src={logo} width={335} alt='Logo pizzaria dev' />
@@ -23,4 +23,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default AuthenticationPage
